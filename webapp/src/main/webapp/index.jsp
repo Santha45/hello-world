@@ -1,23 +1,58 @@
-<form action="action_page.php" method="post">
-  <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+<html ng-app="cricketApp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by Arun-Htamilan</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+</head>
+
+<body ng-controller="MainCtrl as main">
+
+  <div class="scoreboard">
+
+    <div class="titles">
+
+      <div>no</div>
+      <div>batting</div>
+      <div>bowling</div>
+      <div>runs</div>
+
+    </div>
+
+    <div class="content" ng-cloak>
+      <div>
+        <ul>
+          <li ng-repeat="i in [1,2,3,4]">{{i}}</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li ng-repeat="bat in main.battingList">{{bat.firstName}}</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li ng-repeat="bowl in main.bowlingList">bowled by {{bowl}}</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li ng-repeat="i in [10,20,30,40]">{{i}}</li>
+        </ul>
+      </div>
+
+    </div>
+
+
   </div>
 
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+  <script src="js/index.js"></script>
+  <!-- <script src="js/factory.js"></script> -->
 
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
+</body>
 
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form> 
+</html>> 
